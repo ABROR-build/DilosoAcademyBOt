@@ -12,8 +12,10 @@ def create_database_sync():
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             fullname TEXT NOT NULL,
+            username TEXT,
+            user_id INTEGER,
             age TEXT,
-            telephone_number TEXT NOT NULL,
+            telephone_number TEXT,
             is_confirmed BOOLEAN NOT NULL DEFAULT 0,
             is_admin BOOLEAN NOT NULL DEFAULT 0
         )
